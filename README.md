@@ -1,4 +1,4 @@
-# Day 04 – Piscine .NET
+# Day 04 – Bootcamp .NET
 ### Time to have a rest
 
 # Contents
