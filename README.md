@@ -1,4 +1,4 @@
-# Day 04 – Bootcamp .NET
+# Day 04 – .NET Boot camp
 ### Time to have a rest
 
 # Contents
