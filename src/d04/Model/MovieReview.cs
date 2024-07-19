@@ -2,7 +2,6 @@ using System.Text.Json;
 
 public class MovieReview : ISearchable
 {
-
     public Dictionary<string, object> Info { get; private set; }
     public string title { get; set; }
     public string mpaa_rating { get; set; }
@@ -15,9 +14,6 @@ public class MovieReview : ISearchable
     public DateTime date_updated { get; set; }
     public Link link { get; set; }
     public Multimedia multimedia { get; set; }
-
-
-
 }
 
 public class Link
