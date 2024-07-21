@@ -1,7 +1,4 @@
 
-MovieReview? review = JsonSerializer.Deserialize<WeatherReview>(json);
+MovieReviewSerializer serializer = new MovieReviewSerializer();
 
-using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
-{
-
-}
+serializer.Load("../movie_reviews.json");
