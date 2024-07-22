@@ -1,33 +1,17 @@
-using System.Text.Json;
+using System.Text;
 
 public class MovieReview : ISearchable
 {
-    public Dictionary<string, object> Info { get; private set; }
-    public string Title { get; set; }
-    public string mpaa_rating { get; set; }
-    public int critics_pick { get; set; }
-    public string byline { get; set; }
-    public string headline { get; set; }
-    public string summary_short { get; set; }
-    public DateTime publication_date { get; set; }
-    public DateTime opening_date { get; set; }
-    public DateTime LastUpdatedDateTimeUtc { get; set; }
-    public DateTime? date_updated { get; set; }
-    public Link link { get; set; }
-    public Multimedia multimedia { get; set; }
-}
+    public string Title { get; set; } = "";
+    public int CriticsPick { get; set; } = -1;
+    public string SummaryShort { get; set; } = "";
+    public string Url { get; set; } = "";
 
-public class Link
-{
-    public string type { get; set; }
-    public string url { get; set; }
-    public string suggested_link_text { get; set; }
-}
-
-public class Multimedia
-{
-    public string type { get; set; }
-    public string src { get; set; }
-    public int height { get; set; }
-    public int width { get; set; }
+    public override string ToString()
+    {
+        string criticsPick = CriticsPick > 0 ? $"[NYT critic's pick]\n" : "\n";
+        return $"{Title}" + ' ' + criticsPick +
+               $"{SummaryShort}\n" +
+               $"{Url}";
+    }
 }

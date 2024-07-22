@@ -19,8 +19,8 @@ public static class SearchableExtensions
             .ToList();
     }
 
-    // public static T? GetBest<T>(this IEnumerable<T> list, Func<T, bool> predicate)
-    // {
-    //     return list.FirstOrDefault(predicate);
-    // }
+    public static T? GetBest<T>(this IEnumerable<T> list, Func<T, bool> predicate)
+    {
+        return list.FirstOrDefault(predicate);
+    }
 }
