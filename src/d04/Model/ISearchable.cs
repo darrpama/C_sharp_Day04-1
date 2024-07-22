@@ -12,7 +12,7 @@ public static class SearchableExtensions
     {
         if (string.IsNullOrWhiteSpace(search))
         {
-            return [];
+            return Enumerable.Empty<T>();
         }
 
         return list
