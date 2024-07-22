@@ -2,6 +2,8 @@ using MovieJsonStruct;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
+namespace d04.Model
+{
 public class MovieReviewDeserializer
 {
     private NamingStrategy _namingStrategy;
@@ -69,3 +71,5 @@ namespace MovieJsonStruct
         public string? SuggestedLinkText { get; set; }
     }
 }
+
+}  // namespace d04.Model

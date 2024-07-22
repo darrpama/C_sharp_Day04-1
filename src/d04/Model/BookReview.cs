@@ -1,3 +1,5 @@
+namespace d04.Model
+{
 public class BookReview
 {
     public string Title { get; set; } = "";
@@ -15,3 +17,4 @@ public class BookReview
         return result;
     }
 }
+}  // namespace d04.Model

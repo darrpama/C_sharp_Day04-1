@@ -1,5 +1,7 @@
 using System.Text;
 
+namespace d04.Model
+{
 public class MovieReview : ISearchable
 {
     public string Title { get; set; } = "";
@@ -14,4 +16,5 @@ public class MovieReview : ISearchable
                $"{SummaryShort}\n" +
                $"{Url}";
     }
+}
 }

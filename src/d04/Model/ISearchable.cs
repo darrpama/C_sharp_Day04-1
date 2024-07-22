@@ -1,3 +1,5 @@
+namespace d04.Model
+{
 public interface ISearchable
 {
     string Title { get; set; }
@@ -10,7 +12,7 @@ public static class SearchableExtensions
     {
         if (string.IsNullOrWhiteSpace(search))
         {
-            return Enumerable.Empty<T>();
+            return [];
         }
 
         return list
@@ -24,3 +26,4 @@ public static class SearchableExtensions
         return list.FirstOrDefault(predicate);
     }
 }
+}  // namespace d04.Model

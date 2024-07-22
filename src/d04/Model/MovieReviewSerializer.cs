@@ -1,6 +1,7 @@
 using System.Text.Json;
 
-
+namespace d04.Model
+{
 public class MovieReviewSerializer
 {
     public MovieReviewSerializer() {}
@@ -57,4 +58,5 @@ namespace MovieJsonStruct
         public string? Url { get; set; }
         public string? SuggestedLinkText { get; set; }
     }
+}
 }

@@ -1,6 +1,8 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
+namespace d04.Model
+{
 public class BookReviewDeserializer
 {
     public BookReviewDeserializer() {}
@@ -8,14 +10,14 @@ public class BookReviewDeserializer
     public IEnumerable<BookReview> Deserialize(string filepath)
     {
         string fileText = File.ReadAllText(filepath);
-        BookJsonResponse response = new BookJsonResponse();
+        BookJsonResponse? response = new BookJsonResponse();
         var settings = new JsonSerializerSettings
         {
             ContractResolver = new DefaultContractResolver { NamingStrategy = new SnakeCaseNamingStrategy() }
         };
         response = JsonConvert.DeserializeObject<BookJsonResponse>(fileText, settings);
         
-        if (response.Results == null)
+        if (response == null || response.Results == null)
         {
             throw new ArgumentException("Invalid data. Check your input and try again.");
         }
@@ -38,3 +40,4 @@ public class BookReviewDeserializer
         }
     }
 }
+}  // namespace d04.Movie

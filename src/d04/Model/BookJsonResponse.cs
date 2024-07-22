@@ -1,5 +1,7 @@
 using Newtonsoft.Json;
 
+namespace d04.Model
+{
 public class BookJsonResponse
 {
     public string Status { get; set; } = "";
@@ -23,4 +25,5 @@ public class BookJsonResponse
             public string Author { get; set; } = "";
         }
     }
+}
 }
