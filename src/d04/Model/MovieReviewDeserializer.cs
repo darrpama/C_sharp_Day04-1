@@ -24,11 +24,8 @@ public class MovieReviewDeserializer
 
         foreach (var result in response.Results)
         {
-            var link = result.Link?.FirstOrDefault();
-            if (link != null)
-            {
+            var link = result.LinkEntity;
 
-            }
             yield return new MovieReview
             {
                 Title = result.Title ?? "",
@@ -39,6 +36,5 @@ public class MovieReviewDeserializer
         }
     }
 }
-
 
 }  // namespace d04.Model

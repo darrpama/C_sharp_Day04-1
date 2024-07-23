@@ -22,14 +22,15 @@ public class MovieJsonResponse
         public DateTime? PublicationDate { get; set; }
         public DateTime? OpeningDate { get; set; }
         public DateTime? DateUpdated { get; set; }
-        public Link? Link { get; set; }
+        public Link? LinkEntity { get; set; } = new Link();
+        public class Link
+        {
+            public Link() {}
+            public string? Type { get; set; }
+            public string? Url { get; set; }
+            public string? SuggestedLinkText { get; set; }
+        }
     }
 
-    public class Link
-    {
-        public string? Type { get; set; }
-        public string? Url { get; set; }
-        public string? SuggestedLinkText { get; set; }
-    }
 }
 }  // namespace d04.Model
