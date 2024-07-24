@@ -26,13 +26,16 @@ public class MovieReviewDeserializer
         {
             var link = result.LinkEntity;
 
-            yield return new MovieReview
-            {
-                Title = result.Title ?? "",
-                CriticsPick  = result.CriticsPick,
-                SummaryShort = result.SummaryShort ?? "",
-                Url = link.Url ?? ""
-            };
+            if (link != null) {
+                yield return new MovieReview
+                {
+                    Title = result.Title ?? "",
+                    CriticsPick  = result.CriticsPick,
+                    SummaryShort = result.SummaryShort ?? "",
+                    Url = link.Url ?? ""
+                };
+            }
+
         }
     }
 }

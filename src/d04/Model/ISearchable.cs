@@ -21,9 +21,11 @@ public static class SearchableExtensions
             .ToList();
     }
 
-    public static T? GetBest<T>(this IEnumerable<T> list, Func<T, bool> predicate)
+    public static T? GetBest<T>(this IEnumerable<T> list, Func<T, int> rankSelector)
     {
-        return list.FirstOrDefault(predicate);
+        return list
+            .OrderByDescending(rankSelector)
+            .FirstOrDefault();
     }
 }
 }  // namespace d04.Model
