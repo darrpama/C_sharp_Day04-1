@@ -9,6 +9,10 @@ public class BookReviewDeserializer
 
     public IEnumerable<BookReview> Deserialize(string filepath)
     {
+        if (filepath is null)
+        {
+            throw new ArgumentException("Invalid data. Check your input and try again.");
+        }
         string fileText = File.ReadAllText(filepath);
         BookJsonResponse? response = new BookJsonResponse();
         var settings = new JsonSerializerSettings
