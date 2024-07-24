@@ -9,7 +9,7 @@ public class MovieReview : ISearchable
 
     public override string ToString()
     {
-        string result = $"{Title}" + ' ' + $"[NYT critic's pick]\n" +
+        string result = $"{Title}" + ' ' + $"[NYT critic's pick] : \"{CriticsPick}\"\n" +
                         $"{SummaryShort}\n" +
                         $"{Url}";
         return result;
