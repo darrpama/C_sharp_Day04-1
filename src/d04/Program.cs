@@ -3,7 +3,8 @@ using Microsoft.Extensions.Configuration;
 
 
 ConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
-configurationBuilder.AddJsonFile("Config.json", true, reloadOnChange: true); // Bool indicates file is optional
+configurationBuilder.SetBasePath(Directory.GetCurrentDirectory())
+                    .AddJsonFile("Config.json", true, reloadOnChange: true);
 IConfiguration config = configurationBuilder.Build();
 
 string bookJsonPath = config.GetSection("file_paths:books").Value;

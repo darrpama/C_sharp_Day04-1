@@ -1,0 +1,6 @@
+{
+    "file_paths": {
+        "books": "../book_reviews.json",
+        "movies": "../movie_reviews.json"
+    }
+}
